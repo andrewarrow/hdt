@@ -1,9 +1,11 @@
 package main
 
 import "fmt"
-import "github.com/andrewarrow/hdt/client"
+
+//import "github.com/andrewarrow/hdt/client"
+import "github.com/andrewarrow/hdt/server"
 
 func main() {
-	fmt.Println("vim-go")
-	client.Start()
+	fmt.Println("starting")
+	server.Start()
 }
