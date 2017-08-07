@@ -34,12 +34,13 @@ func clientConns(listener net.Listener) chan net.Conn {
 }
 
 func handleConn(client net.Conn) {
+	client.Write([]byte("WELCOME TO HDT, STATE YOUR VERSION\n"))
 	b := bufio.NewReader(client)
 	for {
 		line, err := b.ReadBytes('\n')
 		if err != nil {
 			break
 		}
-		client.Write(line)
+		fmt.Println(line)
 	}
 }
